@@ -21,4 +21,6 @@ require('nightfox').setup({
 })
 
 vim.cmd("colorscheme carbonfox")
-require('lualine').setup({ ... })
+
+require('lualine').setup()
+vim.opt.laststatus = 3
