@@ -1,4 +1,7 @@
 --------- SETTINGS ----------
+vim.cmd("colorscheme carbonfox")
+require('lualine').setup({ ... })
+
 vim.o.clipboard = 'unnamedplus'
 
 vim.wo.number = true
@@ -30,11 +33,11 @@ vim.opt.updatetime = 600
 --------- YANK-HIGHLIGHT ----------
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+    group = highlight_group,
+    pattern = '*',
 })
 
 
@@ -44,5 +47,6 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 vim.keymap.set("n", "<leader>q", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ss", ':so<CR>:PackerSync<CR>')
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
