@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     use("EdenEast/nightfox.nvim")
     use("nvim-lualine/lualine.nvim")
 
+
     use {
        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { { 'nvim-lua/plenary.nvim' } }
