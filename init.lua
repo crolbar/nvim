@@ -1,4 +1,3 @@
-
 --------- SETTINGS ----------
 vim.o.clipboard = 'unnamedplus'
 
@@ -8,15 +7,15 @@ vim.wo.relativenumber = true
 vim.opt.wrap = false
 
 vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
-vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
+vim.opt.swapfile = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -37,6 +36,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
 
 
 --------- BINDGINS ----------
