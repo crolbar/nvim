@@ -18,6 +18,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 
 vim.opt.scrolloff = 15
+vim.opt.sidescrolloff = 35
 
 vim.opt.updatetime = 600
 
