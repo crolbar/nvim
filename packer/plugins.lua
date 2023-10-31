@@ -8,8 +8,8 @@ return require('packer').startup(function(use)
     use('andweeb/presence.nvim')
     use("EdenEast/nightfox.nvim")
     use("nvim-lualine/lualine.nvim")
-
     use('neovim/nvim-lspconfig')
+
     use('hrsh7th/nvim-cmp')
     use('hrsh7th/cmp-nvim-lsp')
     use('saadparwaiz1/cmp_luasnip')

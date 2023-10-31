@@ -3,7 +3,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 ---------- SERVERS -----------
 
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'html', 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'lua_ls' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         capabilities = capabilities,
@@ -19,7 +19,6 @@ lspconfig.lua_ls.setup {
         },
     },
 }
-
 
 ---------- CMP -----------
 
