@@ -1,6 +1,6 @@
 require('nightfox').setup({
   options = {
-    transparent = false,
+    transparent = true,
   },
   palettes = {
       all = {

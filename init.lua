@@ -3,6 +3,7 @@ vim.o.clipboard = 'unnamedplus'
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.wrap = false
+vim.o.termguicolors = true
 
 
 vim.opt.tabstop = 4
