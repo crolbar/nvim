@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
     use('numToStr/Comment.nvim')
     use('norcalli/nvim-colorizer.lua')
     use('akinsho/toggleterm.nvim')
+    use('lewis6991/gitsigns.nvim')
 
     use('andweeb/presence.nvim')
     use("EdenEast/nightfox.nvim")
@@ -19,7 +20,7 @@ return require('packer').startup(function(use)
 
     use {
         "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
+        config = function() require("nvim-autopairs").setup() end
     }
 
     use {
@@ -30,6 +31,5 @@ return require('packer').startup(function(use)
     use {
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function() require("nvim-tree").setup { view = { width = 30 } } end
     }
 end)

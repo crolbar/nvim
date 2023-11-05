@@ -3,9 +3,9 @@ require'toggleterm'.setup()
 function _G.set_terminal_keymaps()
     local opts = {buffer = 0}
     vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-    vim.keymap.set('t', '<M-S-k>', [[<Cmd>wincmd k<CR>]], opts)
-    vim.keymap.set('t', '<M-S-h>', [[<Cmd>wincmd h<CR>]], opts)
-    vim.keymap.set('t', '<M-S-l>', [[<Cmd>wincmd l<CR>]], opts)
+    vim.keymap.set('t', '<M-k>', [[<Cmd>wincmd k<CR>]], opts)
+    vim.keymap.set('t', '<M-h>', [[<Cmd>wincmd h<CR>]], opts)
+    vim.keymap.set('t', '<M-l>', [[<Cmd>wincmd l<CR>]], opts)
 
     vim.keymap.set("t", "<M-`>", '<Cmd>1ToggleTerm <CR>')
     vim.keymap.set("t", "<M-1>", '<Cmd>2ToggleTerm <CR>')
