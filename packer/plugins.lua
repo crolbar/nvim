@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('numToStr/Comment.nvim')
     use('norcalli/nvim-colorizer.lua')
+    use('akinsho/toggleterm.nvim')
 
     use('andweeb/presence.nvim')
     use("EdenEast/nightfox.nvim")

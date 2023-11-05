@@ -46,3 +46,8 @@ vim.keymap.set("n", "<leader>ss", ':so<CR>:PackerSync<CR>')
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+
+vim.keymap.set('n', '<M-S-j>', '<C-W>j', { noremap = true })
+vim.keymap.set('n', '<M-S-k>', '<C-W>k', { noremap = true })
+vim.keymap.set('n', '<M-S-l>', '<C-W>l', { noremap = true })
+vim.keymap.set('n', '<M-S-h>', '<C-W>h', { noremap = true })
