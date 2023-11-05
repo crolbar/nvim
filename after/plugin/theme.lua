@@ -21,6 +21,19 @@ require('nightfox').setup({
 })
 
 vim.cmd("colorscheme carbonfox")
-
-require('lualine').setup()
 vim.opt.laststatus = 3
+require('lualine').setup {
+  options = {
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch'},
+    lualine_c = {'diff', 'diagnostics'},
+    lualine_x = {'filetype', 'fileformat', 'filename'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+}
+
