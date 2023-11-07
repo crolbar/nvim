@@ -55,3 +55,8 @@ vim.keymap.set('n', '<M-j>', '<C-W>j', { noremap = true })
 vim.keymap.set('n', '<M-k>', '<C-W>k', { noremap = true })
 vim.keymap.set('n', '<M-l>', '<C-W>l', { noremap = true })
 vim.keymap.set('n', '<M-h>', '<C-W>h', { noremap = true })
+
+-- maybe remove ?
+vim.keymap.set('n', '<leader><S-f>', ":tabe %<CR>")
+vim.keymap.set('n', '<leader>z', 'gt', { noremap = true })
+
