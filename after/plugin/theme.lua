@@ -7,7 +7,6 @@ require('nightfox').setup({
       all = {
           comment = "#008040",
           sel0 = "#2D2036",
-          sel1 = "#2D2036",
 
           blue = { base = "#DE64AC", dim = "#92328F", bright = "#FF79C1" },
           cyan = { base = "#ffffff", dim = "#ffffff", bright = "#ffffff" },
