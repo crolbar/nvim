@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
     use('akinsho/toggleterm.nvim')
     use('lewis6991/gitsigns.nvim')
     use('ThePrimeagen/harpoon')
+    use('iamcco/markdown-preview.nvim')
+    use("lukas-reineke/indent-blankline.nvim")
 
     use('andweeb/presence.nvim')
     use("EdenEast/nightfox.nvim")
