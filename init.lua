@@ -45,8 +45,8 @@ vim.keymap.set("i", "jk", "<ESC>", { silent = true })
 
 vim.keymap.set("n", "<leader>ss", ':so<CR>:PackerSync<CR>')
 
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', '<leader><Tab>', '<C-w><C-p>', { noremap = true })
 
