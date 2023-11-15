@@ -16,3 +16,6 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 vim.keymap.set("n", "<M-`>", ':1ToggleTerm size=20 direction=float <CR>')
 vim.keymap.set("n", "<M-1>", ':2ToggleTerm size=20 direction=horizontal <CR>')
 vim.keymap.set("n", "<M-2>", ':3ToggleTerm size=20 direction=horizontal <CR>')
+
+local cmd = "cargo run"
+vim.keymap.set("n", "<S-X>", string.format(':2TermExec cmd="%s"<CR>', cmd))
