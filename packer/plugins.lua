@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
     use('lewis6991/gitsigns.nvim')
     use('ThePrimeagen/harpoon')
     use('iamcco/markdown-preview.nvim')
+    use('Pocco81/true-zen.nvim')
 
     use('andweeb/presence.nvim')
     use("EdenEast/nightfox.nvim")
@@ -19,6 +20,9 @@ return require('packer').startup(function(use)
     use('hrsh7th/cmp-nvim-lsp')
     use('saadparwaiz1/cmp_luasnip')
     use('L3MON4D3/LuaSnip')
+
+    use('ggandor/leap.nvim')
+    use{'smoka7/hop.nvim', tag = '*'}
 
     use {
         "windwp/nvim-autopairs",

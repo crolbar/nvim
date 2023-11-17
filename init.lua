@@ -56,3 +56,6 @@ vim.keymap.set('n', '<M-l>', '<C-W>l')
 vim.keymap.set('n', '<M-h>', '<C-W>h')
 
 vim.keymap.set('n', ';w', ':w<CR>')
+
+vim.keymap.set("n", "<leader>ww", ':TZFocus<CR>:TZMinimalist<CR>', { silent = true })
+vim.keymap.set("v", "<leader>wn", ":'<,'>TZNarrow<CR>")
