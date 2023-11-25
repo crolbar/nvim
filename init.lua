@@ -41,7 +41,16 @@ vim.g.maplocalleader = ' '
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 vim.keymap.set("n", "<leader>q", vim.cmd.Ex)
-vim.keymap.set("i", "jk", "<ESC>", { silent = true })
+
+vim.keymap.set("i", "jk", "<ESC>")
+vim.keymap.set("i", "JK", "<ESC>")
+vim.keymap.set("i", "Jk", "<ESC>")
+vim.keymap.set("i", "jK", "<ESC>")
+
+vim.keymap.set('i', '<M-h>', "<Left>")
+vim.keymap.set('i', '<M-j>', "<Down>")
+vim.keymap.set('i', '<M-k>', "<Up>")
+vim.keymap.set('i', '<M-l>', "<Right>")
 
 vim.keymap.set("n", "<leader>ss", ':so<CR>:PackerSync<CR>')
 
