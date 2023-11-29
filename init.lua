@@ -52,6 +52,9 @@ vim.keymap.set('i', '<M-j>', "<Down>")
 vim.keymap.set('i', '<M-k>', "<Up>")
 vim.keymap.set('i', '<M-l>', "<Right>")
 
+vim.keymap.set('c', '<M-h>', "<Left>")
+vim.keymap.set('c', '<M-l>', "<Right>")
+
 vim.keymap.set("n", "<leader>ss", ':so<CR>:PackerSync<CR>')
 
 vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
@@ -68,3 +71,5 @@ vim.keymap.set('n', ';w', ':w<CR>')
 
 vim.keymap.set("n", "<leader>ww", ':TZFocus<CR>:TZMinimalist<CR>', { silent = true })
 vim.keymap.set("v", "<leader>wn", ":'<,'>TZNarrow<CR>")
+
+vim.keymap.set("n", "<leader>ii",  ":!feh %<CR>", { silent = true })
