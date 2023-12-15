@@ -18,4 +18,4 @@ vim.keymap.set("n", "<M-1>", ':2ToggleTerm size=20 direction=horizontal <CR>')
 vim.keymap.set("n", "<M-2>", ':3ToggleTerm size=20 direction=horizontal <CR>')
 
 local cmd = "cargo run"
-vim.keymap.set("n", "<S-X>", string.format(':2TermExec cmd="%s"<CR>', cmd))
+vim.keymap.set("n", "<S-X>", string.format(':1TermExec cmd="%s"<CR>', cmd))
