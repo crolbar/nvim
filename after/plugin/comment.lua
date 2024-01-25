@@ -4,21 +4,21 @@ require('Comment').setup({
     ---LHS of toggle mappings in NORMAL mode
     toggler = {
         ---Line-comment toggle keymap
-        line = '<C-_>i',
+        line = '<C-/>i',
     },
     ---LHS of operator-pending mappings in NORMAL and VISUAL mode
     opleader = {
         ---Line-comment keymap
-        line = '<C-_>',
+        line = '<C-/>',
     },
     ---LHS of extra mappings
     extra = {
         ---Add comment on the line above
-        above = '<C-_>O',
+        above = '<C-/>O',
         ---Add comment on the line below
-        below = '<C-_>o',
+        below = '<C-/>o',
         ---Add comment at the end of line
-        eol = '<C-_>A',
+        eol = '<C-/>A',
     },
 })
 
