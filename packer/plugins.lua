@@ -7,7 +7,12 @@ return require('packer').startup(function(use)
     use('norcalli/nvim-colorizer.lua')
     use('akinsho/toggleterm.nvim')
     use('lewis6991/gitsigns.nvim')
-    use('ThePrimeagen/harpoon')
+    use "nvim-lua/plenary.nvim"
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
     use('iamcco/markdown-preview.nvim')
     use('Pocco81/true-zen.nvim')
 
