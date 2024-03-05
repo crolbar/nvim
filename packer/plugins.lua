@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
     use('norcalli/nvim-colorizer.lua')
     use('akinsho/toggleterm.nvim')
     use('lewis6991/gitsigns.nvim')
-    use "nvim-lua/plenary.nvim"
+    use("nvim-lua/plenary.nvim")
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
@@ -33,6 +33,8 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup() end
     }
+
+    use('lukas-reineke/indent-blankline.nvim')
 
     use {
        'nvim-telescope/telescope.nvim', tag = '0.1.4',
