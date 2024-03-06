@@ -62,10 +62,10 @@ vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', '<leader><Tab>', '<C-w><C-p>', { noremap = true })
 
-vim.keymap.set('n', '<M-j>', '<C-W>j')
-vim.keymap.set('n', '<M-k>', '<C-W>k')
-vim.keymap.set('n', '<M-l>', '<C-W>l')
-vim.keymap.set('n', '<M-h>', '<C-W>h')
+vim.keymap.set('n', '<M-J>', '<C-W>j')
+vim.keymap.set('n', '<M-K>', '<C-W>k')
+vim.keymap.set('n', '<M-L>', '<C-W>l')
+vim.keymap.set('n', '<M-H>', '<C-W>h')
 
 vim.keymap.set('n', ';w', ':w<CR>')
 

@@ -1,8 +1,9 @@
 require'toggleterm'.setup()
 
-vim.keymap.set('t', '<M-k>', [[<Cmd>wincmd k<CR>]])
-vim.keymap.set('t', '<M-h>', [[<Cmd>wincmd h<CR>]])
-vim.keymap.set('t', '<M-l>', [[<Cmd>wincmd l<CR>]])
+vim.keymap.set('t', '<M-K>', [[<Cmd>wincmd k<CR>]])
+vim.keymap.set('t', '<M-H>', [[<Cmd>wincmd h<CR>]])
+vim.keymap.set('t', '<M-L>', [[<Cmd>wincmd l<CR>]])
+vim.keymap.set('t', '<M-J>', [[<Cmd>wincmd j<CR>]])
 
 vim.keymap.set("t", "<M-`>", '<Cmd>1ToggleTerm <CR>')
 vim.keymap.set("t", "<M-1>", '<Cmd>2ToggleTerm <CR>')
