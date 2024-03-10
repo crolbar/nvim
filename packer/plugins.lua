@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
         branch = "harpoon2",
         requires = { {"nvim-lua/plenary.nvim"} }
     }
+    use('ThePrimeagen/vim-be-good')
     use('iamcco/markdown-preview.nvim')
     use('Pocco81/true-zen.nvim')
 
