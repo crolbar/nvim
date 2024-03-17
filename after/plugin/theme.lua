@@ -32,7 +32,7 @@ require('lualine').setup {
         lualine_a = {'mode'},
         lualine_b = {'filename'},
         lualine_c = {'diff', 'diagnostics'},
-        lualine_x = {'filetype', 'fileformat', 'branch'},
+        lualine_x = {'harpoon2', 'filetype', 'fileformat', 'branch'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
     },

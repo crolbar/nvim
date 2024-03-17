@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
     use("EdenEast/nightfox.nvim")
     use("nvim-lualine/lualine.nvim")
     use('neovim/nvim-lspconfig')
+    use('letieu/harpoon-lualine')
 
     use('hrsh7th/nvim-cmp')
     use('hrsh7th/cmp-nvim-lsp')
