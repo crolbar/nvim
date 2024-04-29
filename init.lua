@@ -4,6 +4,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.wrap = false
 vim.o.termguicolors = true
+vim.api.nvim_command('set iskeyword-=_')
 
 
 vim.opt.tabstop = 4
@@ -73,3 +74,8 @@ vim.keymap.set("n", "<leader>ww", ':TZFocus<CR>:TZMinimalist<CR>', { silent = tr
 vim.keymap.set("v", "<leader>wn", ":'<,'>TZNarrow<CR>")
 
 vim.keymap.set("n", "<leader>ii",  ":!feh %<CR>", { silent = true })
+
+vim.keymap.set("n", "<leader>n",  ":noh<CR>", { silent = true })
+
+vim.keymap.set("n", "<C-j>",  ":cnext<CR>", { silent = true })
+vim.keymap.set("n", "<C-k>",  ":cprev<CR>", { silent = true })

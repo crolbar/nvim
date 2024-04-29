@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
     use('iamcco/markdown-preview.nvim')
     use('Pocco81/true-zen.nvim')
 
-    use('andweeb/presence.nvim')
+    use('vyfor/cord.nvim', { run = './build' })
     use("EdenEast/nightfox.nvim")
     use("nvim-lualine/lualine.nvim")
     use('neovim/nvim-lspconfig')
