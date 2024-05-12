@@ -79,3 +79,7 @@ vim.keymap.set("n", "<leader>n",  ":noh<CR>", { silent = true })
 
 vim.keymap.set("n", "<C-j>",  ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>",  ":cprev<CR>", { silent = true })
+
+-- remove annoying binds
+vim.keymap.set("v", "K", "")
+vim.keymap.set("v", "J", "")
