@@ -39,7 +39,7 @@ cmp.setup {
         ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
         ['<C-d>'] = cmp.mapping.scroll_docs(4),  -- Down
         -- C-b (back) C-f (forward) for snippet placeholder navigation.
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-c>'] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
@@ -66,8 +66,16 @@ cmp.setup {
     },
 }
 
-
-
+vim.diagnostic.config({
+    float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+    },
+})
 
 ---------- BINDINGS -----------
 
@@ -75,7 +83,6 @@ vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<space>le', vim.diagnostic.setloclist)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-
 
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -88,5 +95,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
         vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
+        vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
     end,
 })

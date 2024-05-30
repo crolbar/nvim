@@ -70,9 +70,6 @@ vim.keymap.set('n', '<M-H>', '<C-W>h')
 
 vim.keymap.set('n', ';w', ':w<CR>')
 
-vim.keymap.set("n", "<leader>ww", ':TZFocus<CR>:TZMinimalist<CR>', { silent = true })
-vim.keymap.set("v", "<leader>wn", ":'<,'>TZNarrow<CR>")
-
 vim.keymap.set("n", "<leader>ii",  ":!feh %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>n",  ":noh<CR>", { silent = true })
@@ -81,5 +78,8 @@ vim.keymap.set("n", "<C-j>",  ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>",  ":cprev<CR>", { silent = true })
 
 -- remove annoying binds
-vim.keymap.set("v", "K", "")
-vim.keymap.set("v", "J", "")
+vim.keymap.set("v", "K", "<Up>")
+vim.keymap.set("v", "J", "<Down>")
+
+vim.keymap.set("n", "<", "<<")
+vim.keymap.set("n", ">", ">>")

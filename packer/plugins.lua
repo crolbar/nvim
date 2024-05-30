@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
     }
     use('ThePrimeagen/vim-be-good')
     use('iamcco/markdown-preview.nvim')
-    use('Pocco81/true-zen.nvim')
+    use('folke/zen-mode.nvim')
 
     use('vyfor/cord.nvim', { run = './build' })
     use("EdenEast/nightfox.nvim")
