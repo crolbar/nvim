@@ -5,7 +5,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local servers = {
     'html', 'clangd', 'rust_analyzer', 'pyright',
-    'lua_ls', 'bashls', 'cssls', 'nixd',
+    'lua_ls', 'bashls', 'cssls', 'nixd', 'tsserver'
 }
 
 for _, lsp in ipairs(servers) do
