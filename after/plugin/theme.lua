@@ -32,7 +32,13 @@ require('lualine').setup {
         lualine_a = {'mode'},
         lualine_b = {'filename'},
         lualine_c = {'diff', 'diagnostics'},
-        lualine_x = {'harpoon2', 'filetype', 'fileformat', 'branch'},
+        lualine_x = {
+           {
+               "harpoon2",
+               icon = '',
+               indicators = { "A", "O", "E", "U", "I", "D", "H", "T", "N", "S" },
+               active_indicators = { "[A]", "[O]", "[E]", "[U]", "[I]", "[D]", "[H]", "[T]", "[N]", "[S]" },
+           }, 'filetype', 'fileformat', 'branch'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
     },
