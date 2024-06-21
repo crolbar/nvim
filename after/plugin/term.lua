@@ -9,6 +9,8 @@ vim.keymap.set("t", "<M-`>", '<Cmd>1ToggleTerm <CR>')
 vim.keymap.set("t", "<M-1>", '<Cmd>2ToggleTerm <CR>')
 vim.keymap.set("t", "<M-2>", '<Cmd>3ToggleTerm <CR>')
 
+vim.keymap.set("t", "<A-Esc>", '<C-\\><C-n>')
+
 vim.keymap.set("n", "<M-`>", ':1ToggleTerm size=20 direction=float <CR>')
 vim.keymap.set("n", "<M-1>", ':2ToggleTerm size=20 direction=horizontal <CR>')
 vim.keymap.set("n", "<M-2>", ':3ToggleTerm size=20 direction=horizontal <CR>')
