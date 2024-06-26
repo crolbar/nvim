@@ -1,6 +1,6 @@
 local builtin = require('telescope.builtin')
 
-vim.keymap.set('n', 't', builtin.find_files, {})
+vim.keymap.set('n', '<C-t>', builtin.find_files, { noremap = false })
 vim.keymap.set('n', '<leader>sw', builtin.lsp_definitions, {})
 vim.keymap.set('n', '<leader>p', builtin.git_files, {})
 vim.keymap.set('n', '<leader>/', function()
