@@ -81,7 +81,4 @@ vim.keymap.set("n", "<C-k>",  ":cprev<CR>", { silent = true })
 vim.keymap.set("v", "K", "<Up>")
 vim.keymap.set("v", "J", "<Down>")
 
-vim.keymap.set("n", "<", "<<")
-vim.keymap.set("n", ">", ">>")
-
 vim.keymap.set("i", "<A-.>", "<nop>")
