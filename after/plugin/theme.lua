@@ -21,6 +21,7 @@ require('nightfox').setup({
     },
 })
 
+require('lsp-progress').setup()
 vim.cmd("colorscheme carbonfox")
 vim.opt.laststatus = 3
 require('lualine').setup {
@@ -33,12 +34,29 @@ require('lualine').setup {
         lualine_b = {'filename'},
         lualine_c = {'diff', 'diagnostics'},
         lualine_x = {
+           function()
+               return require('lsp-progress').progress()
+           end,
+           function ()
+               local bufnr = vim.api.nvim_get_current_buf()
+               local c = vim.lsp.buf_get_clients(bufnr)
+               local name = ""
+
+               for _, client in pairs(c) do
+                   name = client.name
+               end
+               return name
+           end,
            {
                "harpoon2",
                icon = '',
                indicators = { "A", "O", "E", "U", "I", "D", "H", "T", "N", "S" },
                active_indicators = { "[A]", "[O]", "[E]", "[U]", "[I]", "[D]", "[H]", "[T]", "[N]", "[S]" },
-           }, 'filetype', 'fileformat', 'branch'},
+           },
+           'filetype',
+           'fileformat',
+           'branch',
+        },
         lualine_y = {'progress'},
         lualine_z = {'location'}
     },
