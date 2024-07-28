@@ -5,7 +5,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local servers = {
     'html', 'clangd', 'rust_analyzer', 'pyright',
-    'lua_ls', 'bashls', 'cssls', 'nixd', 'tsserver'
+    'lua_ls', 'bashls', 'cssls', 'tsserver', 'nil_ls'
 }
 
 for _, lsp in ipairs(servers) do
@@ -23,6 +23,9 @@ lspconfig.lua_ls.setup {
         },
     },
 }
+
+require("conform").formatters_by_ft.nix = { "alejandra" }
+vim.keymap.set('n', '<M-f>', require('conform').format)
 
 ---------- CMP -----------
 
@@ -102,3 +105,29 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
     end,
 })
+
+local switch_nix_lsp = function ()
+    local bufnr = vim.api.nvim_get_current_buf()
+    local c = vim.lsp.buf_get_clients(bufnr)
+    local name = ""
+
+    for client_id, client in pairs(c) do
+        name = client.name
+        if name == 'nixd' or name == 'nil_ls' then
+            vim.lsp.buf_detach_client(bufnr, client_id)
+        end
+    end
+
+    if name == 'nixd' then
+        lspconfig.nil_ls.setup {
+            capabilities = capabilities,
+        }
+        print("Using nil_ls")
+    elseif name == 'nil_ls' then
+        lspconfig.nixd.setup { capabilities = capabilities }
+        lspconfig.nixd.setup { capabilities = capabilities }
+        print("Using nixd")
+    end
+end
+
+vim.keymap.set('n', '<leader>nn', switch_nix_lsp)

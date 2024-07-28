@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     use('hrsh7th/cmp-nvim-lsp')
     use('hrsh7th/cmp-buffer')
     use('L3MON4D3/LuaSnip')
+    use('stevearc/conform.nvim')
 
     use('ggandor/leap.nvim')
     use{'smoka7/hop.nvim', tag = '*'}
