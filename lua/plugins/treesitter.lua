@@ -4,6 +4,7 @@ return {
         -- workaround for treesitter to work in nix installed with HM (https://github.com/NixOS/nixpkgs/issues/189838)
         local parser_install_dir = vim.fn.stdpath("cache") .. "/treesitters"
         vim.fn.mkdir(parser_install_dir, "p")
+        vim.opt.runtimepath:append(parser_install_dir)
 
         require'nvim-treesitter.configs'.setup {
             ensure_installed = { "c", "lua", "vim", "vimdoc", "rust" },
