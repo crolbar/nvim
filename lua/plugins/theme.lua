@@ -41,6 +41,19 @@ return {
                 lualine_b = {'filename'},
                 lualine_c = {'diff', 'diagnostics'},
                 lualine_x = {
+                    {
+                        function ()
+                            local mode = require("noice").api.statusline.mode.get()
+
+                            if string.match(mode, "recording") then
+                                return mode
+                            else
+                                return ""
+                            end
+                        end,
+                        cond = require("noice").api.statusline.mode.has,
+                        color = { fg = "#df4a63" },
+                    },
                     function ()
                         local bufnr = vim.api.nvim_get_current_buf()
                         local c = vim.lsp.buf_get_clients(bufnr)
