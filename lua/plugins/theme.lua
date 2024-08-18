@@ -15,18 +15,16 @@ return {
             palettes = {
                 all = {
                     comment = "#008040",
-                    sel0 = "#2D2036",
 
                     blue = { base = "#DE64AC", dim = "#92328F", bright = "#FF79C1" },
                     cyan = { base = "#ffffff", dim = "#ffffff", bright = "#ffffff" },
 
-                    bg0 = "#101010",
-                    bg1 = "#101010",
-                    bg2 = "#101010",
-                    bg4 = "#101010",
-                    bg3 = "#101010",
+                    bg0 = "#161616",
+                    bg1 = "#161616",
+                    bg2 = "#161616",
+                    bg4 = "#393939",
+                    bg3 = "#262626",
                 }
-
             },
         })
 
