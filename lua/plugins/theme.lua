@@ -2,14 +2,13 @@ return {
     "EdenEast/nightfox.nvim",
     dependencies = {
         "nvim-lualine/lualine.nvim",
-        "linrongbin16/lsp-progress.nvim",
         "lukas-reineke/indent-blankline.nvim",
         "letieu/harpoon-lualine",
     },
     config = function ()
         require('nightfox').setup({
             options = {
-                transparent = true,
+                transparent = false,
                 terminal_colors = false,
             },
             palettes = {
@@ -28,7 +27,6 @@ return {
             },
         })
 
-        require('lsp-progress').setup()
         vim.cmd("colorscheme carbonfox")
         vim.opt.laststatus = 3
         require('lualine').setup {
@@ -41,9 +39,6 @@ return {
                 lualine_b = {'filename'},
                 lualine_c = {'diff', 'diagnostics'},
                 lualine_x = {
-                    function()
-                        return require('lsp-progress').progress()
-                    end,
                     function ()
                         local bufnr = vim.api.nvim_get_current_buf()
                         local c = vim.lsp.buf_get_clients(bufnr)
