@@ -13,13 +13,14 @@ return {
             },
             palettes = {
                 all = {
-                    comment = "#008040",
+                    comment = "#007035",
 
+                    green = { base = "#3DAA63", dim = "#3DAA63", bright = "#3DAA63" },
                     blue = { base = "#DE64AC", dim = "#92328F", bright = "#FF79C1" },
-                    cyan = { base = "#ffffff", dim = "#ffffff", bright = "#ffffff" },
+                    cyan = { base = "#D4D4D4", dim = "#D4D4D4", bright = "#D4D4D4" },
 
-                    bg0 = "#161616",
-                    bg1 = "#161616",
+                    bg0 = "#131313",
+                    bg1 = "#161616", -- alt 2E2E2E
                     bg2 = "#161616",
                     bg4 = "#393939",
                     bg3 = "#262626",
@@ -29,6 +30,7 @@ return {
 
         vim.cmd("colorscheme carbonfox")
         vim.opt.laststatus = 3
+
         require('lualine').setup {
             options = {
                 component_separators = { left = '', right = ''},
@@ -42,13 +44,17 @@ return {
                     function ()
                         local bufnr = vim.api.nvim_get_current_buf()
                         local c = vim.lsp.buf_get_clients(bufnr)
-                        local name = ""
-
-                        for _, client in pairs(c) do
-                            name = client.name
+                        local n = ""
+                        for i, client in pairs(c) do
+                            if i > 1 then
+                                n = n .. ' + ' .. client.name
+                            else
+                                n = client.name
+                            end
                         end
-                        return name
+                        return n
                     end,
+
                     {
                         "harpoon2",
                         icon = '',
