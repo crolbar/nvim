@@ -5,6 +5,7 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         "stevearc/conform.nvim", -- i don't actually use formatters but nix'es 2 space indent's scare me
         "L3MON4D3/LuaSnip",
+        --"mfussenegger/nvim-jdtls",
     },
     config = function ()
         local lspconfig = require('lspconfig')
@@ -14,7 +15,8 @@ return {
 
         local servers = {
             'html', 'clangd', 'rust_analyzer', 'pyright',
-            'lua_ls', 'bashls', 'cssls', 'tsserver', 'nil_ls'
+            'lua_ls', 'bashls', 'cssls', 'tsserver', 'nil_ls',
+            'jdtls'
         }
 
         for _, lsp in ipairs(servers) do
