@@ -8,7 +8,7 @@ return {
 
         vim.keymap.set('n', '<C-t>', builtin.find_files, { noremap = false })
         vim.keymap.set('n', '<leader>sw', builtin.lsp_definitions, {})
-        vim.keymap.set('n', '<leader>p', builtin.git_files, {})
+        vim.keymap.set('n', '<leader>g', builtin.git_files, {})
         vim.keymap.set('n', '<leader>/', function()
             require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
                 winblend = 10,
