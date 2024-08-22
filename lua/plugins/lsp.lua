@@ -35,43 +35,38 @@ return {
             },
         }
 
+        ---------- CONFORM -----------
+
         require("conform").formatters_by_ft.nix = { "alejandra" }
         vim.keymap.set('n', '<M-f>', require('conform').format)
 
+
         ---------- CMP -----------
 
-        local luasnip = require 'luasnip'
 
         local cmp = require 'cmp'
+        local confirm_cfg = { select = true, behavior = cmp.ConfirmBehavior.Replace }
+
         cmp.setup {
             snippet = {
                 expand = function(args)
-                    luasnip.lsp_expand(args.body)
+                    require('luasnip').lsp_expand(args.body)
                 end,
             },
             mapping = cmp.mapping.preset.insert({
-                ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
-                ['<C-d>'] = cmp.mapping.scroll_docs(4),  -- Down
-                -- C-b (back) C-f (forward) for snippet placeholder navigation.
+                ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+                ['<C-d>'] = cmp.mapping.scroll_docs(4),
+
                 ['<C-c>'] = cmp.mapping.complete(),
-                ['<CR>'] = cmp.mapping.confirm {
-                    behavior = cmp.ConfirmBehavior.Replace,
-                    select = true,
-                },
-                ['<Tab>'] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_next_item()
-                    else
-                        fallback()
-                    end
-                end, { 'i', 's' }),
-                ['<S-Tab>'] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_prev_item()
-                    else
-                        fallback()
-                    end
-                end, { 'i', 's' }),
+
+                ['<C-n>'] = cmp.mapping.select_next_item(),
+                ['<C-p>'] = cmp.mapping.select_prev_item(),
+                ['<C-y>'] = cmp.mapping.confirm(confirm_cfg),
+
+                -- bad habits
+                ['<CR>'] = cmp.mapping.confirm(confirm_cfg),
+                ['<Tab>'] = cmp.mapping.select_next_item(),
+                ['<S-Tab>'] = cmp.mapping.select_prev_item(),
             }),
             sources = {
                 { name = 'nvim_lsp' },
