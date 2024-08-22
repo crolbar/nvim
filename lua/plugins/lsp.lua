@@ -5,7 +5,6 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         "stevearc/conform.nvim", -- i don't actually use formatters but nix'es 2 space indent's scare me
         "L3MON4D3/LuaSnip",
-        --"mfussenegger/nvim-jdtls",
     },
     config = function ()
         local lspconfig = require('lspconfig')
@@ -37,7 +36,16 @@ return {
 
         ---------- CONFORM -----------
 
-        require("conform").formatters_by_ft.nix = { "alejandra" }
+        require("conform").setup({
+            formatters = {
+                ["google-java-format"] = { command = "google-java-format", append_args = { "-a" }}
+            },
+            formatters_by_ft = {
+                nix = { "alejandra" },
+                java = { "google-java-format" }
+            },
+        })
+
         vim.keymap.set('n', '<M-f>', require('conform').format)
 
 
