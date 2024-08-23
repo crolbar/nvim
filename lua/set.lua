@@ -23,6 +23,7 @@ vim.opt.sidescrolloff = 35
 
 vim.opt.updatetime = 600
 
+vim.opt.colorcolumn = "80"
 
 --------- YANK-HIGHLIGHT ----------
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

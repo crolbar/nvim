@@ -29,6 +29,7 @@ return {
         })
 
         vim.cmd("colorscheme carbonfox")
+        vim.cmd('hi ColorColumn guibg=#262626')
         vim.opt.laststatus = 3
 
         require('lualine').setup {
