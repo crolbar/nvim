@@ -5,11 +5,6 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 vim.keymap.set("n", "<leader>q", vim.cmd.Ex)
 
-vim.keymap.set("i", "jk", "<ESC>")
-vim.keymap.set("i", "JK", "<ESC>")
-vim.keymap.set("i", "Jk", "<ESC>")
-vim.keymap.set("i", "jK", "<ESC>")
-
 vim.keymap.set('i', '<M-h>', "<Left>")
 vim.keymap.set('i', '<M-j>', "<Down>")
 vim.keymap.set('i', '<M-k>', "<Up>")
@@ -39,7 +34,7 @@ vim.keymap.set("n", "<leader>n",  ":noh<CR>", { silent = true })
 vim.keymap.set("n", "<C-j>",  ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>",  ":cprev<CR>", { silent = true })
 
-vim.keymap.set("v", "<leader>d", [["fd]])
+vim.keymap.set({"n", "v"}, "<leader>d", [["fd]])
 vim.keymap.set({"n", "v"}, "<leader>p", [["fp]])
 
 -- remove annoying binds

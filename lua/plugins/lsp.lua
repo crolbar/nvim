@@ -70,11 +70,6 @@ return {
                 ['<C-n>'] = cmp.mapping.select_next_item(),
                 ['<C-p>'] = cmp.mapping.select_prev_item(),
                 ['<C-y>'] = cmp.mapping.confirm(confirm_cfg),
-
-                -- bad habits
-                ['<CR>'] = cmp.mapping.confirm(confirm_cfg),
-                ['<Tab>'] = cmp.mapping.select_next_item(),
-                ['<S-Tab>'] = cmp.mapping.select_prev_item(),
             }),
             sources = {
                 { name = 'nvim_lsp' },
