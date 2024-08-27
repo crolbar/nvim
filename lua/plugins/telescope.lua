@@ -1,37 +1,37 @@
+local builtin = require('telescope.builtin')
+
 return {
     "nvim-telescope/telescope.nvim",
-    dependencies = {
-        "nvim-lua/plenary.nvim"
-    },
-    config = function ()
-        local builtin = require('telescope.builtin')
-
-        vim.keymap.set('n', '<C-t>', builtin.find_files, { noremap = false })
-        vim.keymap.set('n', '<leader>sw', builtin.lsp_definitions, {})
-        vim.keymap.set('n', '<leader>g', builtin.git_files, {})
-        vim.keymap.set('n', '<leader>/', function()
-            require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+        { '<C-t>', builtin.find_files, { noremap = false }},
+        { '<leader>sw', builtin.lsp_definitions},
+        { '<leader>g', builtin.git_files},
+        { '<leader>/', function()
+            builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
                 winblend = 10,
                 previewer = false,
             })
-        end)
+        end},
 
 
-        vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
-        local nmap = function(keys, func, desc)
-            if desc then
-                desc = 'LSP: ' .. desc
-            end
-
-            vim.keymap.set('n', keys, func, { desc = desc })
-        end
-
-
-        nmap('gd', builtin.lsp_definitions, '[G]oto [D]efinition')
-        nmap('gr', builtin.lsp_references, '[G]oto [R]eferences')
-        nmap('gI', builtin.lsp_implementations, '[G]oto [I]mplementation')
-        nmap('<leader>D', builtin.lsp_type_definitions, 'Type [D]efinition')
-        nmap('<leader>ds', builtin.lsp_document_symbols, '[D]ocument [S]ymbols')
-        nmap('<leader>ws', builtin.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-    end
+        {'<leader>vh', builtin.help_tags},
+        {'gd', builtin.lsp_definitions},
+        {'gr', builtin.lsp_references},
+        {'gI', builtin.lsp_implementations},
+        {'<leader>D', builtin.lsp_type_definitions},
+        {'<leader>ds', builtin.lsp_document_symbols},
+        {'<leader>ws', builtin.lsp_dynamic_workspace_symbols},
+    },
+    opts = {
+        defaults = { -- https://github.com/freddiehaddad/nvim/blob/main/lua/plugins/telescope.lua
+            borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└', },
+            mappings = {
+                i = {
+                    ['<c-h>'] = 'select_horizontal',
+                    ['<c-x>'] = 'which_key',
+                },
+            },
+        },
+    },
 }

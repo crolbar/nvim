@@ -1,5 +1,6 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    build = ':TSUpdate',
     config = function ()
         -- workaround for treesitter to work in nix installed with HM (https://github.com/NixOS/nixpkgs/issues/189838)
         local parser_install_dir = vim.fn.stdpath("cache") .. "/treesitters"

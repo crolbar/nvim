@@ -1,28 +1,26 @@
 return {
     "akinsho/toggleterm.nvim",
-    config = function ()
-        require'toggleterm'.setup()
+    keys = {
+        { '<M-K>', [[<Cmd>wincmd k<CR>]], mode = 't' },
+        { '<M-H>', [[<Cmd>wincmd h<CR>]], mode = 't' },
+        { '<M-L>', [[<Cmd>wincmd l<CR>]], mode = 't' },
+        { '<M-J>', [[<Cmd>wincmd j<CR>]], mode = 't' },
 
-        vim.keymap.set('t', '<M-K>', [[<Cmd>wincmd k<CR>]])
-        vim.keymap.set('t', '<M-H>', [[<Cmd>wincmd h<CR>]])
-        vim.keymap.set('t', '<M-L>', [[<Cmd>wincmd l<CR>]])
-        vim.keymap.set('t', '<M-J>', [[<Cmd>wincmd j<CR>]])
+        { "<M-`>", '<Cmd>1ToggleTerm <CR>', {silent = true}, mode = "t" },
+        { "<M-1>", '<Cmd>2ToggleTerm <CR>', mode = "t" },
+        { "<M-2>", '<Cmd>3ToggleTerm <CR>', mode = "t" },
 
-        vim.keymap.set("t", "<M-`>", '<Cmd>1ToggleTerm <CR>')
-        vim.keymap.set("t", "<M-1>", '<Cmd>2ToggleTerm <CR>')
-        vim.keymap.set("t", "<M-2>", '<Cmd>3ToggleTerm <CR>')
+        { "<A-Esc>", '<C-\\><C-n>', mode = "t" },
 
-        vim.keymap.set("t", "<A-Esc>", '<C-\\><C-n>')
+        --{ "<M-`>", ':1ToggleTerm size=20 direction=float <CR>', mode = "v" },
+        { "<M-`>", ':1ToggleTerm size=20 direction=float <CR>', {silent = true}, },
+        { "<M-`>", '<Esc> :1ToggleTerm size=20 direction=float <CR>', mode = { "v" , "i" }, {silent = true}, },
 
-        vim.keymap.set("v", "<M-`>", ':1ToggleTerm size=20 direction=float <CR>')
+        { "<M-1>", ':2ToggleTerm size=20 direction=horizontal <CR>', mode = "n" },
+        { "<M-2>", ':3ToggleTerm size=20 direction=horizontal <CR>', mode = "n" },
 
-        vim.keymap.set("n", "<M-`>", ':1ToggleTerm size=20 direction=float <CR>')
-        vim.keymap.set("n", "<M-1>", ':2ToggleTerm size=20 direction=horizontal <CR>')
-        vim.keymap.set("n", "<M-2>", ':3ToggleTerm size=20 direction=horizontal <CR>')
 
-        vim.keymap.set("i", "<M-`>", '<Esc> :1ToggleTerm size=20 direction=float <CR>')
-
-        local cmd = "!!"
-        vim.keymap.set("n", "<S-X>", string.format(':1TermExec cmd="%s"<CR>', cmd))
-    end
+        { "<S-X>", string.format(':1TermExec cmd="%s"<CR>', "!!"), mode = "n" },
+    },
+    opts = {},
 }

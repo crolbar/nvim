@@ -143,5 +143,6 @@ return {
     init = function()
         -- force the statusline to update (the statusline for some reason doesn't update when I go into 'no' mode)
         vim.api.nvim_create_autocmd('ModeChanged', { callback = function() vim.cmd('redrawstatus') end, })
+        vim.opt.laststatus = 3
     end,
 }
