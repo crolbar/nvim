@@ -109,7 +109,7 @@ local l = {
             right_sep = "block",
         },
 
-        { provider = "lsp_client_names", left_sep = "block", right_sep = "block", },
+        { provider = "lsp_client_names", left_sep = "block", right_sep = "block", icon = {str = "󰣨 ", hl = { fg= "#ACA6F5" }} },
 
         { provider = "line_percentage", left_sep = "block", right_sep = "block", },
 
