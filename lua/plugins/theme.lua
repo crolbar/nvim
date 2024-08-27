@@ -1,9 +1,5 @@
 return {
     "EdenEast/nightfox.nvim",
-    dependencies = {
-        "nvim-lualine/lualine.nvim",
-        "letieu/harpoon-lualine",
-    },
     config = function ()
         require('nightfox').setup({
             options = {
@@ -30,57 +26,5 @@ return {
         vim.cmd("colorscheme carbonfox")
         vim.cmd('hi ColorColumn guibg=#262626')
         vim.opt.laststatus = 3
-
-        require('lualine').setup {
-            options = {
-                component_separators = { left = '', right = ''},
-                section_separators = { left = '', right = ''},
-            },
-            sections = {
-                lualine_a = {'mode'},
-                lualine_b = {'filename'},
-                lualine_c = {'diff', 'diagnostics'},
-                lualine_x = {
-                    {
-                        function ()
-                            local mode = require("noice").api.statusline.mode.get()
-
-                            if string.match(mode, "recording") then
-                                return mode
-                            else
-                                return ""
-                            end
-                        end,
-                        cond = require("noice").api.statusline.mode.has,
-                        color = { fg = "#df4a63" },
-                    },
-                    function ()
-                        local bufnr = vim.api.nvim_get_current_buf()
-                        local c = vim.lsp.buf_get_clients(bufnr)
-                        local n = ""
-                        for i, client in pairs(c) do
-                            if i > 1 then
-                                n = n .. ' + ' .. client.name
-                            else
-                                n = client.name
-                            end
-                        end
-                        return n
-                    end,
-
-                    {
-                        "harpoon2",
-                        icon = '',
-                        indicators = { "A", "O", "E", "U", "I", "D", "H", "T", "N", "S" },
-                        active_indicators = { "[A]", "[O]", "[E]", "[U]", "[I]", "[D]", "[H]", "[T]", "[N]", "[S]" },
-                    },
-                    'filetype',
-                    'fileformat',
-                    'branch',
-                },
-                lualine_y = {'progress'},
-                lualine_z = {'location'}
-            },
-        }
     end
 }
