@@ -79,6 +79,15 @@ local l = {
     },
 
     { -- RIGHT
+        { -- keystrokes
+            provider = function()
+                local m = require("noice").api.status.command.get()
+                if type(m) ~= "string" then m = "" end
+                return m
+            end,
+            right_sep = "block",
+        },
+
         { -- harpoon
             provider = function ()
                 local harpoon = require("harpoon")
