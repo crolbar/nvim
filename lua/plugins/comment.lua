@@ -11,7 +11,7 @@ return {
             end,
             mode = {"n", "v"},
         },
-        {'<C-_>', function()end}
+        {'<C-_>', function()end, mode = {'n', 'v'}}
     },
     opts = {
         ---Add a space b/w comment and the line
