@@ -38,6 +38,8 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["fd]])
 vim.keymap.set({"n", "v"}, "<leader>p", [["fp]])
 
 -- remove annoying binds
-vim.keymap.set("v", "K", "<Up>")
+vim.keymap.set("v", "K", "<up>")
+vim.keymap.set("v", "<leader>j", "J")
+vim.keymap.set("v", "J", "<Down>")
 
 vim.keymap.set("i", "<A-.>", "<nop>")
