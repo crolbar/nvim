@@ -91,15 +91,15 @@ local l = {
         { -- harpoon
             provider = function ()
                 local harpoon = require("harpoon")
+                local harpoon_root = harpoon:list().config:get_root_dir();
                 local list = harpoon:list():display()
                 local indicators = { "A", "O", "E", "U", "I", "D", "H", "T", "N", "S" }
                 local s = ""
 
                 for i = 1, harpoon:list():length() do
                     local v = indicators[i]
-                    local curr = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ':t')
 
-                    if string.match(list[i], curr .. "$") then
+                    if string.match(harpoon_root .. '/' .. list[i], vim.api.nvim_buf_get_name(0)) then
                         v = '[' .. v .. ']'
                     end
 
