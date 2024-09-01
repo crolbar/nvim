@@ -25,8 +25,6 @@ vim.keymap.set('n', '<M-K>', '<C-W>k')
 vim.keymap.set('n', '<M-L>', '<C-W>l')
 vim.keymap.set('n', '<M-H>', '<C-W>h')
 
-vim.keymap.set('n', ';w', ':w<CR>')
-
 vim.keymap.set("n", "<leader>ii",  ":!feh %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>n",  ":noh<CR>", { silent = true })
