@@ -13,8 +13,6 @@ vim.keymap.set('i', '<M-l>', "<Right>")
 vim.keymap.set('c', '<M-h>', "<Left>")
 vim.keymap.set('c', '<M-l>', "<Right>")
 
-vim.keymap.set("n", "<leader>ss", ':so<CR>:PackerSync<CR>')
-
 vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
 
