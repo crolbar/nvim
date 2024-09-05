@@ -4,11 +4,6 @@ return {
     --dir  = "~/projects/lua/disc",
     opts = {
         timeout = 3000,
-
-        client_id = "1262546798552158330",
-
-        large_image_text = "the board",
-        large_image = "https://raw.githubusercontent.com/crolbar/yuki/master/imgs/Yuki-v0.1-1.jpg",
         buttons = {
             {
                 label = "This dumbass",
