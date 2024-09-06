@@ -12,10 +12,10 @@ return {
 
         { "<A-Esc>", '<C-\\><C-n>', mode = "t" },
 
-        { "<M-`>", '<Esc> :1ToggleTerm size=20 direction=float <CR>', mode = { "v" , "i", "n"}, {silent = true}, },
+        { "<M-`>", '<Esc><CMD>1ToggleTerm size=20 direction=float<CR>', mode = { "v" , "i", "n"}, {silent = true}, },
 
-        { "<M-1>", '<Esc> :2ToggleTerm size=20 direction=horizontal <CR>', {silent = true}, },
-        { "<M-2>", '<Esc> :3ToggleTerm size=20 direction=horizontal <CR>', {silent = true}, },
+        { "<M-1>", '<Esc><CMD>2ToggleTerm size=20 direction=horizontal<CR>', {silent = true}, },
+        { "<M-2>", '<Esc><CMD>3ToggleTerm size=20 direction=horizontal<CR>', {silent = true}, },
 
 
         { "<S-X>", string.format(':1TermExec cmd="%s"<CR>', "!!"), },
