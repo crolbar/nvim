@@ -14,4 +14,10 @@ return {
         },
     },
     {"kylechui/nvim-surround", keys = {'ys', 'cs', 'ds', {'S', mode = 'v'}}, opts = {}},
+    {
+        'jmbuhr/otter.nvim',
+        dependencies = {'nvim-treesitter/nvim-treesitter'},
+        keys = {{"<leader>ot", function () require("otter").activate(nil, true, true, nil) end}},
+        opts = {},
+    }
 }
