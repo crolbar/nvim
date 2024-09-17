@@ -99,7 +99,7 @@ local l = {
                 for i = 1, harpoon:list():length() do
                     local v = indicators[i]
 
-                    if string.match(harpoon_root .. '/' .. list[i], vim.api.nvim_buf_get_name(0)) then
+                    if harpoon_root .. '/' .. list[i] == vim.api.nvim_buf_get_name(0) then
                         v = '[' .. v .. ']'
                     end
 
