@@ -32,24 +32,5 @@ return {
             },
             filetype = "blade",
         }
-
-        vim.treesitter.query.set('blade', 'highlights', [[
-            (directive) @function
-            (directive_start) @function
-            (directive_end) @function
-            (comment) @comment
-            ((parameter) @include (#set! "priority" 110)) 
-            ((php_only) @include (#set! "priority" 110)) 
-            ((bracket_start) @function (#set! "priority" 120)) 
-            ((bracket_end) @function (#set! "priority" 120)) 
-            (keyword) @function
-        ]])
-
-        vim.treesitter.query.set('blade', 'injections', [[
-            ((text) @injection.content
-                (#not-has-ancestor? @injection.content "envoy")
-                (#set! injection.combined)
-                (#set! injection.language php))
-        ]])
     end
 }
