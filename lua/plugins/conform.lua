@@ -17,6 +17,8 @@ return {
             javascriptreact = { "prettier" },
             typescript = { "prettier" },
             typescriptreact = { "prettier" },
+            php = { "php_cs_fixer" },
+            blade = { "blade-formatter" },
         },
     }
 }

@@ -14,7 +14,7 @@ return {
         local servers = {
             'html', 'clangd', 'rust_analyzer', 'pyright',
             'lua_ls', 'bashls', 'cssls', 'tsserver', 'nil_ls',
-            'jdtls'
+            'jdtls', 'phpactor'
         }
 
         for _, lsp in ipairs(servers) do
