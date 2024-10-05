@@ -88,7 +88,6 @@ return {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
             callback = function()
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
-                vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
                 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 
                 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
