@@ -31,6 +31,8 @@ vim.keymap.set("n", "<C-j>",  ":cnext<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>",  ":cprev<CR>", { silent = true })
 
 vim.keymap.set({"n", "v"}, "<leader>d", [["fd]])
+vim.keymap.set({"n", "v"}, "<leader>c", [["fc]])
+vim.keymap.set({"n", "v"}, "<leader>x", [["fx]])
 vim.keymap.set({"n", "v"}, "<leader>p", [["fp]])
 
 -- remove annoying binds
