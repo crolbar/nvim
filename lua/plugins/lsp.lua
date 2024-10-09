@@ -40,6 +40,9 @@ return {
         local confirm_cfg = { select = true, behavior = cmp.ConfirmBehavior.Replace }
 
         cmp.setup {
+            completion = {
+                autocomplete = false
+            },
             snippet = {
                 expand = function(args)
                     require('luasnip').lsp_expand(args.body)
@@ -66,7 +69,7 @@ return {
             float = {
                 focusable = false,
                 style = "minimal",
-                border = "rounded",
+                border = "single",
                 source = "always",
                 header = "",
                 prefix = "",
