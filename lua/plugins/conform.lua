@@ -19,6 +19,7 @@ return {
             typescriptreact = { "prettier" },
             php = { "php_cs_fixer" },
             blade = { "blade-formatter" },
+            markdown = { "prettier" },
         },
     }
 }
