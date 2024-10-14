@@ -1,9 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
-        "hrsh7th/nvim-cmp",
         "hrsh7th/cmp-nvim-lsp",
-        "L3MON4D3/LuaSnip",
     },
     config = function ()
         local lspconfig = require('lspconfig')
@@ -30,38 +28,6 @@ return {
                         globals = { 'vim' },
                     },
                 },
-            },
-        }
-
-        ---------- CMP -----------
-
-
-        local cmp = require 'cmp'
-        local confirm_cfg = { select = true, behavior = cmp.ConfirmBehavior.Replace }
-
-        cmp.setup {
-            completion = {
-                autocomplete = false
-            },
-            snippet = {
-                expand = function(args)
-                    require('luasnip').lsp_expand(args.body)
-                end,
-            },
-            mapping = cmp.mapping.preset.insert({
-                ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-                ['<C-d>'] = cmp.mapping.scroll_docs(4),
-
-                ['<C-c>'] = cmp.mapping.complete(),
-
-                ['<C-n>'] = cmp.mapping.select_next_item(),
-                ['<C-p>'] = cmp.mapping.select_prev_item(),
-                ['<C-y>'] = cmp.mapping.confirm(confirm_cfg),
-            }),
-            sources = {
-                { name = 'nvim_lsp' },
-                { name = 'luasnip' },
-                { name = 'buffer' },
             },
         }
 
