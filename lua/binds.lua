@@ -35,6 +35,9 @@ vim.keymap.set({"n", "v"}, "<leader>c", [["fc]])
 vim.keymap.set({"n", "v"}, "<leader>x", [["fx]])
 vim.keymap.set({"n", "v"}, "<leader>p", [["fp]])
 
+vim.keymap.set("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv")
+
 -- remove annoying binds
 vim.keymap.set("v", "K", "<up>")
 vim.keymap.set("v", "<leader>j", "J")
