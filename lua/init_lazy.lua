@@ -15,7 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    lockfile = "~/Github/dots/home/cli/neovim/nvim" .. "/lazy-lock.json", -- NOTE: REMOVE THIS LINE (it's because i use an symlink to set my nvim config with nix)
+    lockfile = "~/Github/dots/home/editors/neovim/nvim" .. "/lazy-lock.json", -- NOTE: REMOVE THIS LINE (it's because i use an symlink to set my nvim config with nix)
     spec = {
         { import = "plugins" },
     },
