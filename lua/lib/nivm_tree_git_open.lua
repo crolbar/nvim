@@ -25,7 +25,7 @@ end
 local function open_git_modified_dirs(node)
     if node.type == "directory" then
         if has_git_changes(node.git_status) then
-            lib.expand_or_collapse(node)
+            node:expand_or_collapse()
         end
 
         if node and node.nodes then
