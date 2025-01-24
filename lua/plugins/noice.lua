@@ -1,8 +1,15 @@
 return {
+    tag = "v4.9.0",
     "folke/noice.nvim",
     opts = {
         cmdline = {
             view = "cmdline",
+        },
+        routes = {
+            {
+                filter = { event = "msg_show" },
+                view = "mini",
+            },
         },
         lsp = {
             progress = {
