@@ -6,6 +6,7 @@ return {
 
         return {
             { '<C-t>', builtin.find_files, { noremap = false }},
+            { '<M-b>', builtin.buffers},
             { '<leader>sw', builtin.lsp_definitions},
             { '<leader>g', builtin.git_files},
             { '<leader>/', function()

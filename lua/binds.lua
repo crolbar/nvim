@@ -44,3 +44,6 @@ vim.keymap.set("v", "<leader>j", "J")
 vim.keymap.set("v", "J", "<Down>")
 
 vim.keymap.set("i", "<A-.>", "<nop>")
+
+-- emacs brain
+vim.keymap.set('n', '<C-x><C-s>', ":w<CR>")
