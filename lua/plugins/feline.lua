@@ -139,7 +139,7 @@ local l = {
 }
 
 return {
-    "freddiehaddad/feline.nvim",
+    "second2050/feline.nvim",
     enabled = true,
     opts = {
         components = {
