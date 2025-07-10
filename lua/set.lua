@@ -25,6 +25,8 @@ vim.opt.updatetime = 600
 
 vim.opt.colorcolumn = "80"
 
+vim.g.c_syntax_for_h = 1
+
 --------- YANK-HIGHLIGHT ----------
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
