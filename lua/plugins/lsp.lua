@@ -11,7 +11,7 @@ return {
 
         local servers = {
             'html', 'clangd', 'rust_analyzer', 'pyright',
-            'lua_ls', 'bashls', 'cssls', 'tsserver', 'nil_ls',
+            'lua_ls', 'bashls', 'cssls', 'ts_ls', 'nil_ls',
             'jdtls', 'phpactor', 'gopls', 'zls'
         }
 
