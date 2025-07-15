@@ -20,6 +20,7 @@ return {
             php = { "php_cs_fixer" },
             blade = { "blade-formatter" },
             markdown = { "prettier" },
+            go = { "gofmt" },
         },
     }
 }
